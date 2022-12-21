@@ -6,8 +6,8 @@
 1. setup.py
 2. \[package_dir\]/스크립트들
 3. \[package_dir\]/__init__.py
-4. readme.md
-5. LICENSE.txt (option)
+4. readme.md (optional)
+5. LICENSE.txt (optional)
 ### ![image](https://user-images.githubusercontent.com/62974484/208827509-e4074274-254f-4161-ad35-b2e46fb02231.png)
 ### <br/><br/><br/>
 
@@ -44,7 +44,29 @@ setuptools.setup(
     python_requires='>=3.6',
 )
 ```
+### <br/>
 
+### 2) __init__.py
+#### __all__ 에 import 하는 모듈 이름(스크립트 이름)을 적어야 작동한다.
+#### from \[패키지명\] import \[모듈 이름\] 에서 모듈 이름을 정의한다.
+```
+__all__ = ['bioinfo_parser']
+```
+### <br/>
+
+### 3) readme.md
+#### 패키지의 설명란에 써지는 글을 적는다. 어떤 기능이 있는지 등 자세히 적어주면 좋다.
+```
+# parser for bioinformatics
+```
+#### ![image](https://user-images.githubusercontent.com/62974484/208828329-c1a9f56d-bcd4-4602-9b8a-fdabf8a31a73.png)
+### <br/>
+
+### 4) LISENCE.txt
+```
+Copyright 2022 shinejh0528
+```
+### <br/>
 
 ## 3. import 하고 사용하기
 ### 설치
