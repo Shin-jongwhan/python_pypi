@@ -1,6 +1,10 @@
 # pypi 등록 방법
 ### <br/><br/><br/>
 
+## 0. pypi 가입하기
+### https://pypi.org/project/shinejh0528-bioinfo-parser/#description
+### <br/><br/><br/>
+
 ## 1. directory 준비
 ### 만들어야 할 파일
 1. setup.py
@@ -59,16 +63,38 @@ __all__ = ['bioinfo_parser']
 ```
 # parser for bioinformatics
 ```
-#### ![image](https://user-images.githubusercontent.com/62974484/208828329-c1a9f56d-bcd4-4602-9b8a-fdabf8a31a73.png)
+#### ![image](https://user-images.githubusercontent.com/62974484/208829229-811ac052-246b-4c2c-9928-4b9fc3c4e72b.png)
 ### <br/>
 
 ### 4) LISENCE.txt
 ```
 Copyright 2022 shinejh0528
 ```
+### <br/><br/><br/>
+
+## 3. 패키지 빌드하기
+1. install
+```
+pip install setuptools wheel twine
+```
 ### <br/>
 
-## 3. import 하고 사용하기
+2. setup.py 있는 경로에서 아래 명령어 실행
+```
+python setup.py sdist bdist_wheel
+```
+#### ![image](https://user-images.githubusercontent.com/62974484/208829826-98ffac7a-bffd-4860-ac39-ec6fc59c7d40.png)
+### <br/>
+
+3. pypi 에 빌드하기
+```
+python -m twine upload dist/* --verbose
+```
+### 빌드 성공 확인
+#### ![image](https://user-images.githubusercontent.com/62974484/208829920-f5d0d270-177d-42c6-bd11-24962108eb76.png)
+### <br/><br/><br/>
+
+## 4. import 하고 사용하기
 ### 설치
 #### ![image](https://user-images.githubusercontent.com/62974484/208827295-b6082ee3-87c2-4dea-b1d6-4cfef8724fda.png)
 ### 설치 확인
